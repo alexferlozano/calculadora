@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorFondo"
+        tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="6">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorSimbolos"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edicion"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ayuda"></Button>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:height="100dp"
+            android:textAlignment="textEnd"
+            android:textSize="35dp"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:maxLength="13"
+            android:padding="20dp"
+            android:layout_weight="2"
+            android:id="@+id/resultado"
+            />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="3">
+
+        <Button android:text="MC"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="MR"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="MS"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="M+"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button
+            android:text="M-"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="Del"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="limpieza"
+            android:id="@+id/borrar"/>
+
+        <Button android:text="CE"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="C"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="limpieza"
+            android:id="@+id/limpiar"/>
+
+        <Button android:text="7"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/siete"/>
+
+        <Button android:text="8"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/ocho"/>
+
+        <Button android:text="9"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/nueve"/>
+
+        <Button android:text="/"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="operador"
+            android:id="@+id/division"/>
+
+        <Button android:text="4"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/cuatro"/>
+
+        <Button android:text="5"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/cinco"/>
+
+        <Button android:text="6"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/seis"/>
+
+        <Button android:text="*"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="operador"
+            android:id="@+id/multiplicacion"/>
+
+        <Button android:text="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/uno"/>
+
+        <Button android:text="2"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/dos"/>
+
+        <Button android:text="3"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/tres"/>
+
+        <Button android:text="-"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="operador"
+            android:id="@+id/resta"/>
+
+        <Button android:text="0"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/cero"/>
+
+        <Button android:text="."
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="miClick"
+            android:id="@+id/punto"/>
+
+        <Button android:text="="
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="validacion"
+            android:id="@+id/igual"/>
+
+        <Button android:text="+"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="operador"
+            android:id="@+id/suma"/>
+
+        <Button android:text="+/-"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="√"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="%"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button android:text="1/x"
+            android:textColor="@color/colorPrimaryDark"/>
+    </GridLayout>
+    </LinearLayout>
+
+</RelativeLayout>
