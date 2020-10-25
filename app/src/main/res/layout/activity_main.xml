@@ -5,29 +5,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/colorFondo"
         tools:context=".MainActivity"
         android:weightSum="6">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            android:height="100dp"
-            android:textAlignment="textEnd"
-            android:textSize="35dp"
-            android:layout_centerHorizontal="true"
-            android:text="0"
-            android:maxLength="13"
-            android:padding="20dp"
-            android:layout_weight="2"
-            android:id="@+id/resultado"
-            />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:textAlignment="textEnd"
+            android:textSize="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:maxLength="13"
+            android:padding="20dp"
+            android:id="@+id/resultado"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="4"
+        android:layout_weight="6"
         android:weightSum="6"
         >
         <LinearLayout
@@ -41,7 +44,8 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="C"
                 android:textColor="@color/colorPrimaryDark"
@@ -49,7 +53,8 @@
                 android:id="@+id/limpiar"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="Del"
                 android:layout_height="match_parent"
@@ -57,7 +62,8 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:onClick="limpieza"
                 android:id="@+id/borrar"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="/"
                 android:textColor="@color/colorPrimaryDark"
@@ -65,7 +71,8 @@
                 android:id="@+id/division"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,7 +87,8 @@
             android:textColor="@color/colorPrimaryDark"
             android:onClick="miClick"
             android:id="@+id/siete"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="25dp"/>
 
         <Button android:text="8"
             android:layout_height="match_parent"
@@ -88,7 +96,8 @@
             android:textColor="@color/colorPrimaryDark"
             android:onClick="miClick"
             android:id="@+id/ocho"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="25dp"/>
 
         <Button android:text="9"
             android:layout_height="match_parent"
@@ -96,7 +105,8 @@
             android:textColor="@color/colorPrimaryDark"
             android:onClick="miClick"
             android:id="@+id/nueve"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="25dp"/>
 
         <Button android:text="*"
             android:textColor="@color/colorPrimaryDark"
@@ -104,7 +114,8 @@
             android:id="@+id/multiplicacion"
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="25dp"/>
 
     </LinearLayout>
 
@@ -121,7 +132,8 @@
                 android:id="@+id/cuatro"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="5"
                 android:textColor="@color/colorPrimaryDark"
@@ -129,7 +141,8 @@
                 android:id="@+id/cinco"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="6"
                 android:textColor="@color/colorPrimaryDark"
@@ -137,7 +150,8 @@
                 android:id="@+id/seis"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="+"
                 android:textColor="@color/colorPrimaryDark"
@@ -145,7 +159,8 @@
                 android:id="@+id/suma"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -160,7 +175,8 @@
                 android:id="@+id/uno"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="2"
                 android:textColor="@color/colorPrimaryDark"
@@ -168,7 +184,8 @@
                 android:id="@+id/dos"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="3"
                 android:textColor="@color/colorPrimaryDark"
@@ -176,7 +193,8 @@
                 android:id="@+id/tres"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="-"
                 android:textColor="@color/colorPrimaryDark"
@@ -184,7 +202,8 @@
                 android:id="@+id/resta"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -199,7 +218,8 @@
                 android:id="@+id/cero"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="4"/>
+                android:layout_weight="4"
+                android:textSize="25dp"/>
 
             <Button android:text="."
                 android:textColor="@color/colorPrimaryDark"
@@ -207,7 +227,8 @@
                 android:id="@+id/punto"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
             <Button android:text="="
                 android:textColor="@color/colorPrimaryDark"
@@ -215,8 +236,8 @@
                 android:id="@+id/igual"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
-
+                android:layout_weight="1"
+                android:textSize="25dp"/>
 
         </LinearLayout>
     </LinearLayout>
