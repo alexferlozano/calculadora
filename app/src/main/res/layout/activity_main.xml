@@ -19,125 +19,205 @@
             android:text="0"
             android:maxLength="13"
             android:padding="20dp"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:id="@+id/resultado"
             />
 
-    <GridLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="0dp"
-        android:columnCount="4"
+        android:orientation="vertical"
+        android:layout_weight="4"
+        android:weightSum="6"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_weight="1"
+            >
+            <Button android:text="CE"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button android:text="C"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="limpieza"
+                android:id="@+id/limpiar"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button android:text="Del"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="limpieza"
+                android:id="@+id/borrar"
+                android:layout_weight="1"/>
+
+            <Button android:text="/"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="operador"
+                android:id="@+id/division"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="0dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_weight="3">
-
-        <Button android:text="Del"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="limpieza"
-            android:id="@+id/borrar"/>
-
-        <Button android:text="CE"
-            android:textColor="@color/colorPrimaryDark"/>
-
-        <Button android:text="C"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="limpieza"
-            android:id="@+id/limpiar"/>
-
+        android:weightSum="4"
+        android:layout_weight="1"
+        >
         <Button android:text="7"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
             android:textColor="@color/colorPrimaryDark"
             android:onClick="miClick"
-            android:id="@+id/siete"/>
+            android:id="@+id/siete"
+            android:layout_weight="1"/>
 
         <Button android:text="8"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
             android:textColor="@color/colorPrimaryDark"
             android:onClick="miClick"
-            android:id="@+id/ocho"/>
+            android:id="@+id/ocho"
+            android:layout_weight="1"/>
 
         <Button android:text="9"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
             android:textColor="@color/colorPrimaryDark"
             android:onClick="miClick"
-            android:id="@+id/nueve"/>
-
-        <Button android:text="/"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="operador"
-            android:id="@+id/division"/>
-
-        <Button android:text="4"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/cuatro"/>
-
-        <Button android:text="5"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/cinco"/>
-
-        <Button android:text="6"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/seis"/>
+            android:id="@+id/nueve"
+            android:layout_weight="1"/>
 
         <Button android:text="*"
             android:textColor="@color/colorPrimaryDark"
             android:onClick="operador"
-            android:id="@+id/multiplicacion"/>
+            android:id="@+id/multiplicacion"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"/>
 
-        <Button android:text="1"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/uno"/>
+    </LinearLayout>
 
-        <Button android:text="2"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/dos"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_weight="1"
+            >
+            <Button android:text="4"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/cuatro"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="3"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/tres"/>
+            <Button android:text="5"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/cinco"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="-"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="operador"
-            android:id="@+id/resta"/>
+            <Button android:text="6"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/seis"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="0"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/cero"/>
+            <Button android:text="+"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="operador"
+                android:id="@+id/suma"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_weight="1"
+            >
+            <Button android:text="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/uno"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="."
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
-            android:id="@+id/punto"/>
+            <Button android:text="2"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/dos"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="="
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="validacion"
-            android:id="@+id/igual"/>
+            <Button android:text="3"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/tres"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="+"
-            android:textColor="@color/colorPrimaryDark"
-            android:onClick="operador"
-            android:id="@+id/suma"/>
+            <Button android:text="-"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="operador"
+                android:id="@+id/resta"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_weight="1"
+            >
+            <Button android:text="0"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/cero"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="4"/>
 
-        <Button android:text="+/-"
-            android:textColor="@color/colorPrimaryDark"/>
+            <Button android:text="."
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="miClick"
+                android:id="@+id/punto"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="√"
-            android:textColor="@color/colorPrimaryDark"/>
+            <Button android:text="="
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="validacion"
+                android:id="@+id/igual"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
 
-        <Button android:text="%"
-            android:textColor="@color/colorPrimaryDark"/>
 
-        <Button android:text="1/x"
-            android:textColor="@color/colorPrimaryDark"/>
-    </GridLayout>
-
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
