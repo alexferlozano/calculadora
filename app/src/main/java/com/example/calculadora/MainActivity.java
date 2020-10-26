@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -67,28 +68,38 @@ public class MainActivity extends AppCompatActivity {
     }
     public void validacion(View view)
     {
+        try
+        {
             muestra = resultado.getText().toString();
             muestra = muestra + "1";
             switch (operador)
             {
                 case "+":
-                    total= Double.parseDouble(reserva)+Double.parseDouble(resultado.getText().toString());
+                    total = Double.parseDouble(reserva) + Double.parseDouble(resultado.getText().toString());
                     validador(total);
                     break;
                 case "-":
-                    total= Double.parseDouble(reserva)-Double.parseDouble(resultado.getText().toString());
+                    total = Double.parseDouble(reserva) - Double.parseDouble(resultado.getText().toString());
                     validador(total);
                     break;
                 case "/":
-                    total= Double.parseDouble(reserva)/Double.parseDouble(resultado.getText().toString());
+                    total = Double.parseDouble(reserva) / Double.parseDouble(resultado.getText().toString());
                     validador(total);
                     break;
                 case "*":
-                    total= Double.parseDouble(reserva)*Double.parseDouble(resultado.getText().toString());
+                    total = Double.parseDouble(reserva) * Double.parseDouble(resultado.getText().toString());
                     validador(total);
                     break;
             }
-
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(this, "Ha habido un error por favor introduzca numeros validos", Toast.LENGTH_SHORT).show();
+            muestra="";
+            resultado.setText("");
+            reserva="";
+            operador="";
+        }
     }
     public void validador(Double xd)
     {
