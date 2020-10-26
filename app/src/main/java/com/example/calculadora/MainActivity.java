@@ -8,18 +8,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView resultado;
     double total;
-    String operador, muestra, reserva;
-
+    String operador;
+    String muestra;
+    String reserva,validar;
+    Integer entero;
+    NumberFormat nf= new DecimalFormat("##.###");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         resultado = (TextView) findViewById(R.id.resultado);
-        muestra = "0";
     }
 
     public void miClick(View view) {
@@ -28,67 +33,77 @@ public class MainActivity extends AppCompatActivity {
         muestra = resultado.getText().toString();
         muestra = muestra + digito;
         resultado.setText(muestra);
-
     }
 
     public void operador(View view) {
         switch (view.getId()) {
             case R.id.suma:
-                reserva=resultado.getText().toString();
                 operador = "+";
+                reserva=resultado.getText().toString();
                 resultado.setText("");
                 break;
             case R.id.resta:
-                reserva=resultado.getText().toString();
                 operador = "-";
+                reserva=resultado.getText().toString();
                 resultado.setText("");
                 break;
             case R.id.division:
-                reserva=resultado.getText().toString();
                 operador = "/";
+                reserva=resultado.getText().toString();
                 resultado.setText("");
                 break;
             case R.id.multiplicacion:
-                reserva=resultado.getText().toString();
                 operador = "*";
+                reserva=resultado.getText().toString();
                 resultado.setText("");
                 break;
-
         }
     }
 
     public void validacion(View view)
     {
-        muestra = resultado.getText().toString();
-        muestra = muestra + "1";
-        switch (operador)
-        {
-            case "+":
-                total= Double.parseDouble(reserva)+Double.parseDouble(resultado.getText().toString());
-                resultado.setText(String.valueOf(total));
-                break;
-            case "-":
-                total= Double.parseDouble(reserva)-Double.parseDouble(resultado.getText().toString());
-                resultado.setText(String.valueOf(total));
-                break;
-            case "/":
-                total= Double.parseDouble(reserva)/Double.parseDouble(resultado.getText().toString());
-                resultado.setText(String.valueOf(total));
-                break;
-            case "*":
-                total= Double.parseDouble(reserva)*Double.parseDouble(resultado.getText().toString());
-                resultado.setText(String.valueOf(total));
-                break;
-          }
-    }
+            muestra = resultado.getText().toString();
+            muestra = muestra + "1";
+            switch (operador)
+            {
+                case "+":
+                    total= Double.parseDouble(reserva)+Double.parseDouble(resultado.getText().toString());
+                    validador(total);
+                    break;
+                case "-":
+                    total= Double.parseDouble(reserva)-Double.parseDouble(resultado.getText().toString());
+                    validador(total);
+                    break;
+                case "/":
+                    total= Double.parseDouble(reserva)/Double.parseDouble(resultado.getText().toString());
+                    validador(total);
+                    break;
+                case "*":
+                    total= Double.parseDouble(reserva)*Double.parseDouble(resultado.getText().toString());
+                    validador(total);
+                    break;
+            }
 
+    }
+    public void validador(Double xd)
+    {
+        if (xd%1==0)
+        {
+            resultado.setText(String.valueOf(nf.format(total)));
+        }
+        else
+        {
+            resultado.setText(String.valueOf(xd));
+        }
+        
+    }
     public void limpieza(View view)
     {
         switch (view.getId())
         {
             case R.id.limpiar:
                 muestra="";
-                resultado.setText("");
+                resultado.setText("0");
                 reserva="";
                 operador="";
                 break;
@@ -105,7 +120,9 @@ public class MainActivity extends AppCompatActivity {
                     resultado.setText(muestra);
                 }
                 break;
-
+            case R.id.limpiarPantalla:
+                resultado.setText("0");
+                break;
         }
     }
 }

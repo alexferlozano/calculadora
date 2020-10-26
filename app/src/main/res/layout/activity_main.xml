@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity"
-        android:weightSum="6">
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="6">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        >
+        android:orientation="vertical">
+
         <TextView
+            android:id="@+id/resultado"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="0dp"
-            android:textAlignment="textEnd"
-            android:textSize="40dp"
-            android:layout_centerHorizontal="true"
-            android:text="0"
             android:maxLength="13"
             android:padding="20dp"
-            android:id="@+id/resultado"
-            />
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorBotonMc"
+            android:textSize="40dp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,6 +33,7 @@
         android:orientation="vertical"
         android:layout_weight="6"
         android:weightSum="6"
+        android:background="@color/colorSimbolos"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,8 +46,11 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
+                android:onClick="limpieza"
+                android:id="@+id/limpiarPantalla"
                 android:layout_weight="1"
-                android:textSize="25dp"/>
+                android:textSize="25dp"
+                />
 
             <Button android:text="C"
                 android:textColor="@color/colorPrimaryDark"
@@ -212,14 +217,15 @@
             android:weightSum="4"
             android:layout_weight="1"
             >
-            <Button android:text="0"
-                android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
+
+            <Button
                 android:id="@+id/cero"
+                android:layout_width="180dp"
                 android:layout_height="match_parent"
-                android:layout_width="wrap_content"
-                android:layout_weight="4"
-                android:textSize="25dp"/>
+                android:onClick="miClick"
+                android:text="0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25dp" />
 
             <Button android:text="."
                 android:textColor="@color/colorPrimaryDark"
