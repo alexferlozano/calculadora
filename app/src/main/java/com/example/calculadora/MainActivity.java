@@ -30,8 +30,15 @@ public class MainActivity extends AppCompatActivity {
     public void miClick(View view) {
         Button boton=(Button)view;
         String digito=boton.getText().toString();
-        muestra = resultado.getText().toString();
-        muestra = muestra + digito;
+        if(Integer.parseInt(resultado.getText().toString())==0)
+        {
+            muestra=digito;
+        }
+        else
+        {
+            muestra = resultado.getText().toString();
+            muestra = muestra + digito;
+        }
         resultado.setText(muestra);
     }
 
@@ -40,22 +47,22 @@ public class MainActivity extends AppCompatActivity {
             case R.id.suma:
                 operador = "+";
                 reserva=resultado.getText().toString();
-                resultado.setText("");
+                resultado.setText("0");
                 break;
             case R.id.resta:
                 operador = "-";
                 reserva=resultado.getText().toString();
-                resultado.setText("");
+                resultado.setText("0");
                 break;
             case R.id.division:
                 operador = "/";
                 reserva=resultado.getText().toString();
-                resultado.setText("");
+                resultado.setText("0");
                 break;
             case R.id.multiplicacion:
                 operador = "*";
                 reserva=resultado.getText().toString();
-                resultado.setText("");
+                resultado.setText("0");
                 break;
         }
     }
@@ -95,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
         {
             resultado.setText(String.valueOf(xd));
         }
-        
     }
     public void limpieza(View view)
     {
