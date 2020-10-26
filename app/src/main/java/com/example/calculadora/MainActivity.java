@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
     public void miClick(View view) {
         Button boton=(Button)view;
         String digito=boton.getText().toString();
-        if(Integer.parseInt(resultado.getText().toString())==0)
-        {
-            muestra=digito;
-        }
-        else
-        {
+        /*if(view.getId()==R.id.punto || Double.parseDouble(resultado.getText().toString())!=0)
+        {*/
             muestra = resultado.getText().toString();
-            muestra = muestra + digito;
-        }
+            muestra += digito;
+        /*}
+        else
+        {*/
+           // muestra=digito;
+        //}
         resultado.setText(muestra);
     }
 
@@ -46,27 +47,24 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.suma:
                 operador = "+";
-                reserva=resultado.getText().toString();
-                resultado.setText("0");
                 break;
             case R.id.resta:
                 operador = "-";
-                reserva=resultado.getText().toString();
-                resultado.setText("0");
                 break;
             case R.id.division:
                 operador = "/";
-                reserva=resultado.getText().toString();
-                resultado.setText("0");
                 break;
             case R.id.multiplicacion:
                 operador = "*";
-                reserva=resultado.getText().toString();
-                resultado.setText("0");
                 break;
         }
+        operaciones();
     }
-
+    public void operaciones()
+    {
+        reserva=muestra;
+        resultado.setText("");
+    }
     public void validacion(View view)
     {
             muestra = resultado.getText().toString();
@@ -96,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     {
         if (xd%1==0)
         {
-            resultado.setText(String.valueOf(nf.format(total)));
+            resultado.setText(String.valueOf(nf.format(xd)));
         }
         else
         {
@@ -109,14 +107,14 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.limpiar:
                 muestra="";
-                resultado.setText("0");
+                resultado.setText("");
                 reserva="";
                 operador="";
                 break;
             case R.id.borrar:
                 if(muestra.length()==0)
                 {
-                    muestra="";
+                    muestra="0";
                     resultado.setText(muestra);
                 }
                 else
@@ -127,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.limpiarPantalla:
-                resultado.setText("0");
+                resultado.setText("");
                 break;
         }
     }
