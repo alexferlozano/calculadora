@@ -46,7 +46,6 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:onClick="limpieza"
                 android:id="@+id/limpiarPantalla"
                 android:layout_weight="1"
                 android:textSize="25dp"
@@ -54,7 +53,6 @@
 
             <Button android:text="C"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="limpieza"
                 android:id="@+id/limpiar"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -65,14 +63,12 @@
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="limpieza"
                 android:id="@+id/borrar"
                 android:layout_weight="1"
                 android:textSize="25dp"/>
 
             <Button android:text="/"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="operador"
                 android:id="@+id/division"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -90,7 +86,6 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
             android:id="@+id/siete"
             android:layout_weight="1"
             android:textSize="25dp"/>
@@ -99,7 +94,6 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
             android:id="@+id/ocho"
             android:layout_weight="1"
             android:textSize="25dp"/>
@@ -108,14 +102,12 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:textColor="@color/colorPrimaryDark"
-            android:onClick="miClick"
             android:id="@+id/nueve"
             android:layout_weight="1"
             android:textSize="25dp"/>
 
         <Button android:text="*"
             android:textColor="@color/colorPrimaryDark"
-            android:onClick="operador"
             android:id="@+id/multiplicacion"
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
@@ -133,7 +125,6 @@
             >
             <Button android:text="4"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
                 android:id="@+id/cuatro"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -142,7 +133,6 @@
 
             <Button android:text="5"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
                 android:id="@+id/cinco"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -151,7 +141,6 @@
 
             <Button android:text="6"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
                 android:id="@+id/seis"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -160,7 +149,6 @@
 
             <Button android:text="+"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="operador"
                 android:id="@+id/suma"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -176,7 +164,6 @@
             >
             <Button android:text="1"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
                 android:id="@+id/uno"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -185,7 +172,6 @@
 
             <Button android:text="2"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
                 android:id="@+id/dos"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -194,7 +180,6 @@
 
             <Button android:text="3"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
                 android:id="@+id/tres"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -203,7 +188,6 @@
 
             <Button android:text="-"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="operador"
                 android:id="@+id/resta"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -222,14 +206,12 @@
                 android:id="@+id/cero"
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
-                android:onClick="miClick"
                 android:text="0"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="25dp" />
 
             <Button android:text="."
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="miClick"
                 android:id="@+id/punto"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
@@ -238,7 +220,6 @@
 
             <Button android:text="="
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="validacion"
                 android:id="@+id/igual"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
